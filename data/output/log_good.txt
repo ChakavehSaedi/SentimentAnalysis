@@ -1,0 +1,31 @@
+Sentiment Analysis, 18/01/2020 15:59:38
+===================== Data Prepration ======================
+ * Reading train data
+    - 2000 entries loaded 
+    - number of positive cases 1000 
+    - number of negative cases 1000 
+    - The top 10 most frequent elements are ('the', 1427), ('and', 819), ('a', 798), ('i', 571), ('is', 510), ('of', 502), ('it', 492), ('wa', 479), ('to', 470), ('this', 433)
+    - The full list of the top frequent elements is saved in /data/output/most-feq.txt
+    - The full list of intersection between top frequent elements between positive and negative sentences are saved in /data/output/pos-neg-cnt.csv
+ * Reading test data 
+    - 1000 entries loaded 
+    - number of positive cases 500 
+    - number of negative cases 500 
+======================== SVM Model =========================
+ * Building a SVM classifier with linear kernel
+ * Training the SVM
+    - Evaluating the SVM on the validation set
+    - Validation [accuracy 0.845 	 f1 0.843]
+ * Testing the SVM
+    - test [accuracy 0.743 	 f1 0.752]
+========================= NN Model =========================
+ * Building the neural network
+ * Training the network, Epochs: 6, Batch size: 25
+    - Epoch  1 => train [loss: 0.211 	 acc: 0.840]  -  validation [loss: 0.122 	 acc: 0.825 	 f1: 0.793]
+    - Epoch  2 => train [loss: 0.078 	 acc: 0.800]  -  validation [loss: 0.099 	 acc: 0.860 	 f1: 0.849]
+    - Epoch  3 => train [loss: 0.027 	 acc: 0.880]  -  validation [loss: 0.101 	 acc: 0.880 	 f1: 0.880]
+    - Epoch  4 => train [loss: 0.014 	 acc: 1.000]  -  validation [loss: 0.099 	 acc: 0.865 	 f1: 0.860]
+    - Epoch  5 => train [loss: 0.008 	 acc: 1.000]  -  validation [loss: 0.099 	 acc: 0.870 	 f1: 0.869]
+    - Epoch  6 => train [loss: 0.007 	 acc: 1.000]  -  validation [loss: 0.094 	 acc: 0.875 	 f1: 0.872]
+ * Testing the network
+    - Test result [loss: 0.174 	 acc: 0.789 	 f1: 0.797]
